@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PortfÃ³lio de Caio - Desenvolvedor de Software. Estudante de ADS, especialista em criar soluÃ§Ãµes eficientes utilizando JavaScript, TypeScript, React e Java.">
+    <meta name="author" content="Caio">
+    <meta name="theme-color" content="#090D16">
+    <title>Caio | Desenvolvedor de Software</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Efeitos de Fundo Decorativos (Glow Effects) -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- CabeÃ§alho / NavegaÃ§Ã£o -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">Caio<span>.</span></a>
+
+            <!-- Lado direito: links (desktop) + aÃ§Ãµes (tema + hamburguer) -->
+            <div class="nav-right">
+                <nav class="nav" id="primary-navigation">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link active">InÃ­cio</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+                        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <!-- BotÃ£o de tema: sempre visÃ­vel -->
+                    <button class="theme-toggle" id="theme-toggle-btn" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </button>
+                    <!-- Hamburguer: visÃ­vel sÃ³ no mobile -->
+                    <button class="mobile-nav-toggle" aria-label="Abrir menu" aria-controls="primary-navigation" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-tagline">OlÃ¡, eu sou</p>
+                    <h1 class="hero-title">Caio</h1>
+                    <p class="hero-subtitle">Desenvolvedor de Software | Criando soluÃ§Ãµes atravÃ©s do cÃ³digo.</p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">ConheÃ§a meu trabalho</a>
+                    </div>
+                </div>
+
+                <!-- Foto de Perfil -->
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo-glow"></div>
+                    <div class="hero-photo-ring">
+                        <img src="caio-profile.jpg" alt="Foto de Caio" class="hero-photo" />
+                        <div class="hero-photo-overlay"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <a href="#sobre" aria-label="Rolar para a seÃ§Ã£o sobre mim">
+                    <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sobre Mim Section -->
+        <section id="sobre" class="section sobre-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <p class="about-paragraph">
+                            Sou estudante do 5Âº perÃ­odo de <strong>AnÃ¡lise e Desenvolvimento de Sistemas (ADS)</strong>, residente na regiÃ£o de <strong>GoiÃ¢nia / Aparecida de GoiÃ¢nia</strong>. Minha paixÃ£o pela tecnologia reside em traduzir problemas complexos do mundo real em soluÃ§Ãµes eficientes, limpas e escalÃ¡veis atravÃ©s do cÃ³digo.
+                        </p>
+                        <p class="about-paragraph">
+                            Gosto de construir projetos do zero, vivenciando todo o processo de desenvolvimento â€” desde a concepÃ§Ã£o da arquitetura lÃ³gica atÃ© a persistÃªncia de dados e otimizaÃ§Ã£o. Estou constantemente explorando novas ferramentas e prÃ¡ticas para elevar a qualidade do meu cÃ³digo.
+                        </p>
+                    </div>
+                    
+                    <div class="about-info-sidebar">
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <span class="info-label">FormaÃ§Ã£o</span>
+                                <span class="info-val">AnÃ¡lise e Des. de Sistemas (5Âº PerÃ­odo)</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <span class="info-label">LocalizaÃ§Ã£o</span>
+                                <span class="info-val">GoiÃ¢nia / Aparecida de GoiÃ¢nia - GO</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </span>
+                            <div class="info-content">
+                                <span class="info-label">Foco de AtuaÃ§Ã£o</span>
+                                <span class="info-val">Desenvolvimento Clean & SoluÃ§Ãµes Eficientes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="habilidades" class="section habilidades-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Minhas Ferramentas</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="skills-wrapper">
+
+                    <!-- Categoria 1: Linguagens -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Linguagens</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card" data-tech="html">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                                    <span class="skill-name">HTML</span>
+                                </div>
+                                <p class="skill-desc">Sem&#226;ntica, acessibilidade e estrutura s&#243;lida de documentos web.</p>
+                            </div>
+                            <div class="skill-card" data-tech="css">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+                                    <span class="skill-name">CSS</span>
+                                </div>
+                                <p class="skill-desc">Layouts responsivos, anima&#231;&#245;es, Flexbox e Grid modernos.</p>
+                            </div>
+                            <div class="skill-card" data-tech="javascript">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm15.625 15.65c.57-.348.97-.938.97-1.908 0-1.748-1.39-2.098-2.61-2.588-.89-.36-1.25-.63-1.25-1.12 0-.46.39-.77.94-.77.58 0 .91.24 1.15.62l1.45-.92c-.44-.75-1.18-1.25-2.08-1.33v-1.68h-1.63v1.68c-1.42.11-2.28 1.02-2.28 2.22 0 1.62 1.25 2.07 2.45 2.53.94.36 1.41.67 1.41 1.25 0 .54-.51.87-1.14.87-.8 0-1.29-.44-1.57-1.01l-1.5.87c.43.91 1.34 1.61 2.37 1.76v1.69h1.63v-1.68c1.37-.1 2.47-.94 2.47-2.12z"/></svg>
+                                    <span class="skill-name">JavaScript</span>
+                                </div>
+                                <p class="skill-desc">Programa&#231;&#227;o ass&#237;ncrona, manipula&#231;&#227;o do DOM e ES6+.</p>
+                            </div>
+                            <div class="skill-card" data-tech="typescript">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3zm10.74 15.75c1.11 0 1.94-.36 2.54-.99.59-.64.89-1.56.89-2.78V10.5h-1.89v4.55c0 .7-.14 1.2-.42 1.49-.27.29-.7.44-1.29.44-.56 0-.98-.14-1.26-.41-.28-.27-.42-.77-.42-1.51V10.5h-1.92v5c0 1.22.31 2.14.93 2.76.62.62 1.58.94 2.88.94zm5.885-3.03c.57-.348.97-.938.97-1.908 0-1.748-1.39-2.098-2.61-2.588-.89-.36-1.25-.63-1.25-1.12 0-.46.39-.77.94-.77.58 0 .91.24 1.15.62l1.45-.92c-.44-.75-1.18-1.25-2.08-1.33v-1.68h-1.63v1.68c-1.42.11-2.28 1.02-2.28 2.22 0 1.62 1.25 2.07 2.45 2.53.94.36 1.41.67 1.41 1.25 0 .54-.51.87-1.14.87-.8 0-1.29-.44-1.57-1.01l-1.5.87c.43.91 1.34 1.61 2.37 1.76v1.69h1.63v-1.68c1.37-.1 2.47-.94 2.47-2.12z"/></svg>
+                                    <span class="skill-name">TypeScript</span>
+                                </div>
+                                <p class="skill-desc">Tipagem est&#225;tica, interfaces e seguran&#231;a em tempo de compila&#231;&#227;o.</p>
+                            </div>
+                            <div class="skill-card" data-tech="java">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1.385 17.587c.21.33.63.468.96.257 2.052-1.306 4.767-1.996 7.646-1.942 2.822.054 5.372.84 7.18 2.215.344.263.834.195 1.096-.15.263-.344.195-.834-.15-1.096-2.072-1.576-4.945-2.477-8.13-2.538-3.218-.061-6.28.712-8.545 2.152-.33.21-.468.63-.257.96.002.001.002.001.002.002zm1.614-2.833c.316.23.76.155.99-.16.892-1.223 2.378-2.207 4.183-2.77 1.83-.573 3.902-.756 5.836-.516 3.65.454 6.368 2.32 6.516 2.422.338.232.802.146 1.034-.192s.146-.802-.192-1.034c-.23-.158-3.24-2.228-7.25-2.727-2.174-.27-4.516-.062-6.592.588-2.046.64-3.774 1.777-4.808 3.195-.23.315-.155.76.16.99.001.001.002.002.002.002zm-1.025-2.923c.365.138.775-.05 1.003-.393.308-.465.733-.902 1.258-1.295 1.488-1.11 3.864-1.745 6.685-1.787 2.766-.04 5.178.502 7.172 1.614.34.19.774.07 1.006-.242s.12-.76-.242-1.006c-2.26-1.26-5.01-1.874-8.03-1.83-3.136.046-5.836.76-7.55 2.04-.633.473-1.144 1.002-1.52 1.57-.215.326-.145.753.18.99.008.006.015.012.023.018v.021zm10.742-9.673c-.062.247-.075.49-.04.723.11.728.847 1.22 1.644 1.1 1.25-.19 1.758-1.39 1.054-2.13-.54-.567-1.71-.898-2.658.307zm-1.385-1.42c-.064.246-.076.49-.04.72.112.73.847 1.223 1.645 1.103 1.25-.19 1.756-1.39 1.053-2.132-.542-.566-1.71-.897-2.658.309z"/></svg>
+                                    <span class="skill-name">Java</span>
+                                </div>
+                                <p class="skill-desc">Estruturas robustas de back-end, concorr&#234;ncia e tipos.</p>
+                            </div>
+                            <div class="skill-card" data-tech="nodejs">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 1.01a1.06 1.06 0 0 0-.53.141L2.57 6.317A1.061 1.061 0 0 0 2.04 7.23v9.539c0 .378.201.728.53.918l8.898 5.165a1.062 1.062 0 0 0 1.06 0l8.899-5.165a1.06 1.06 0 0 0 .53-.918V7.23a1.06 1.06 0 0 0-.53-.913L12.528 1.15a1.06 1.06 0 0 0-.53-.14zm-.001 1.77 7.962 4.621v9.198l-7.962 4.62-7.96-4.62V7.4l7.96-4.62zm-.88 3.735v7.445l2.067-1.194V9.316l2.067-1.194V13.76l-6.2 3.582V6.322l2.067 1.193z"/></svg>
+                                    <span class="skill-name">Node.js</span>
+                                </div>
+                                <p class="skill-desc">Runtime JavaScript no servidor, APIs RESTful e arquitetura event-driven.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Frameworks e Libs -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Frameworks &amp; Libs</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card" data-tech="react">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.652c0-.521-.351-.973-.865-1.112-2.395-.65-4.887-1.007-7.466-1.062 1.066-2.25 2.274-4.526 3.652-6.732.29-.463.228-1.077-.149-1.47-.377-.393-.974-.469-1.438-.178-2.13 1.335-4.321 2.923-6.508 4.71-2.188-1.787-4.379-3.375-6.508-4.71-.465-.291-1.061-.215-1.439.178-.377.393-.438 1.007-.149 1.47 1.378 2.206 2.586 4.482 3.652 6.732-2.58.055-5.072.412-7.467 1.062-.514.139-.865.591-.865 1.112 0 .521.351.973.865 1.112 2.395.65 4.887 1.007 7.466 1.062-1.066 2.25-2.274 4.526-3.652 6.732-.29.463-.228 1.077.149 1.47.377.393.974.469 1.438.178 2.13-1.335 4.32-2.923 6.508-4.71 2.188 1.787 4.378 3.375 6.508 4.71.465.291 1.061.215 1.439-.178.377-.393.438-1.007.149-1.47-1.378-2.206-2.586-4.482-3.652-6.732 2.58-.055 5.072-.412 7.467-1.062.514-.139.865-.591.865-1.112zM12 14c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2z"/></svg>
+                                    <span class="skill-name">React</span>
+                                </div>
+                                <p class="skill-desc">Constru&#231;&#227;o de SPAs modernas, hooks, estados e componentiza&#231;&#227;o.</p>
+                            </div>
+                            <div class="skill-card" data-tech="angular">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9.931 12.645h4.138l-2.07-4.908m0-7.737L.68 3.982l1.726 14.771L12 24l9.596-5.247L23.32 3.982 12 .006zm10.064 18.658l-10.064 5.51-10.064-5.51-1.49-12.872L12 1.724l11.554 4.058-1.49 12.872z"/></svg>
+                                    <span class="skill-name">Angular</span>
+                                </div>
+                                <p class="skill-desc">Framework SPA completo com RxJS, inje&#231;&#227;o de depend&#234;ncia e m&#243;dulos.</p>
+                            </div>
+                            <div class="skill-card" data-tech="tailwind">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+                                    <span class="skill-name">Tailwind CSS</span>
+                                </div>
+                                <p class="skill-desc">Estiliza&#231;&#227;o utility-first, design systems e prototipagem r&#225;pida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Conceitos e Versionamento -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Conceitos &amp; Versionamento</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card" data-tech="poo">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                                    <span class="skill-name">P.O.O.</span>
+                                </div>
+                                <p class="skill-desc">Encapsulamento, heran&#231;a, polimorfismo e design patterns s&#243;lidos.</p>
+                            </div>
+                            <div class="skill-card" data-tech="git">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M2.6 10.5l8.9-8.9c.8-.8 2.1-.8 2.9 0l2.8 2.8-2.9 2.9c-.4-.2-.8-.3-1.3-.3-.8 0-1.5.4-1.9 1.1l-2.7-1c-.1-.7-.6-1.2-1.3-1.2-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5c.7 0 1.2-.5 1.3-1.1l2.7 1c0 .2 0 .4.1.5l-1.6 2.7c-.5-.3-1.1-.4-1.7-.2-.8.3-1.3 1.1-1.3 1.9 0 1.1.9 2 2 2s2-.9 2-2c0-.5-.2-1-.5-1.3l1.7-2.7c.4.2.8.3 1.3.3.8 0 1.5-.4 1.9-1l2.9 2.9c-.2.4-.3.8-.3 1.3 0 1.1.9 2 2 2s2-.9 2-2c0-.8-.5-1.5-1.2-1.8l-2.9-2.9 2.9-2.9c.8.8.8 2.1 0 2.9l-8.9 8.9c-.8.8-2.1.8-2.9 0l-8.9-8.9c-.8-.8-.8-2.1 0-2.9z"/></svg>
+                                    <span class="skill-name">Git &amp; GitHub</span>
+                                </div>
+                                <p class="skill-desc">Controle de vers&#227;o, branching, pull requests e workflow colaborativo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 4: Ferramentas e Deploy -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Ferramentas &amp; Deploy</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card" data-tech="maven">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.75 4.5v6.31l3.97-3.97 1.06 1.06-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5 1.06-1.06 3.97 3.97V4.5h1.5zm-6 9.75h10.5v1.5H6.75v-1.5zm1.5 3h7.5v1.5h-7.5v-1.5z"/></svg>
+                                    <span class="skill-name">Maven</span>
+                                </div>
+                                <p class="skill-desc">Gerenciamento de depend&#234;ncias e build automatizado de projetos Java.</p>
+                            </div>
+                            <div class="skill-card" data-tech="vercel">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+                                    <span class="skill-name">Vercel</span>
+                                </div>
+                                <p class="skill-desc">Deploy cont&#237;nuo, edge functions e hospedagem de frontends modernos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoria 5: Banco de Dados -->
+                    <div class="skills-category">
+                        <h3 class="skills-category-title">Banco de Dados</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card" data-tech="postgresql">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.128 0a10.134 10.134 0 0 0-2.755.403l-.063.02A10.922 10.922 0 0 0 12.6.258C11.422.238 10.41.524 9.594 1 8.79.721 7.122.24 5.364.336 4.14.403 2.804.775 1.814 1.82.827 2.865.305 4.482.415 6.682c.03.607.191 1.727.49 3.083.3 1.357.706 2.85 1.265 4.063.56 1.213 1.32 2.26 2.38 2.73.66.291 1.83.425 2.83-.02l.02.069.042.138.063.204c-.678 1.81-1.28 3.49-1.165 5.13.115 1.64.975 3.18 2.73 4.085.67.345 1.388.526 2.102.546.714.02 1.42-.136 2.064-.428.55.04 1.138.064 1.764.064 3.7 0 6.943-.655 9.19-1.756 1.11-.55 1.986-1.2 2.578-1.96.594-.76.913-1.65.882-2.59-.024-.72-.25-1.35-.606-1.9.483-.76.749-1.71.749-2.855 0-.65-.066-1.29-.193-1.9.13-.14.25-.28.36-.43.98-1.32 1.596-3.054 1.596-5.457 0-1.223-.476-2.282-1.243-3.058C22.88.542 21.4 0 19.977 0c-.627 0-1.52.07-2.849 0z"/></svg>
+                                    <span class="skill-name">PostgreSQL</span>
+                                </div>
+                                <p class="skill-desc">Banco relacional robusto, queries SQL avan&#231;adas, &#237;ndices e transa&#231;&#245;es.</p>
+                            </div>
+                            <div class="skill-card" data-tech="supabase">
+                                <div class="skill-header">
+                                    <svg class="skill-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C.199 12.768.753 13.805 1.676 13.805h7.98l.311 9.134c.015.987 1.26 1.41 1.874.638l9.261-11.652c.565-.717.011-1.754-.912-1.754h-7.98l-.31-9.135z"/></svg>
+                                    <span class="skill-name">Supabase</span>
+                                </div>
+                                <p class="skill-desc">Backend-as-a-Service com PostgreSQL, autentica&#231;&#227;o, Storage e Realtime.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Section -->
+        <section id="projetos" class="section projetos-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <p class="projects-intro">Clique nos cards para explorar os detalhes tÃ©cnicos, a arquitetura e os cÃ³digos de cada projeto diretamente de forma interna.</p>
+                
+                <div class="projects-grid">
+                    <!-- Card 1: Agrogestor -->
+                    <div class="project-card" data-project="agrogestor" tabindex="0">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">POO</span>
+                                <span class="project-tag">SQLite</span>
+                            </div>
+                            <h3 class="project-card-title">Agrogestor</h3>
+                            <p class="project-card-desc">Sistema robusto de gestÃ£o agropecuÃ¡ria focado na persistÃªncia eficiente de dados e modularidade sob os conceitos de P.O.O.</p>
+                            <span class="project-card-more">
+                                Ver Detalhes 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Placeholder 1 (Nexus API) -->
+                    <div class="project-card" data-project="nexus-api" tabindex="0">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">TypeScript</span>
+                                <span class="project-tag">PostgreSQL</span>
+                            </div>
+                            <h3 class="project-card-title">Nexus API</h3>
+                            <p class="project-card-desc">Gateway de pagamento com arquitetura limpa, alta escalabilidade e persistÃªncia em banco relacional.</p>
+                            <span class="project-card-more">
+                                Ver Detalhes 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Placeholder 2 (Smart Dashboard) -->
+                    <div class="project-card" data-project="smart-dashboard" tabindex="0">
+                        <div class="project-card-glow"></div>
+                        <div class="project-card-content">
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">TypeScript</span>
+                                <span class="project-tag">Chart.js</span>
+                            </div>
+                            <h3 class="project-card-title">Smart Dashboard</h3>
+                            <p class="project-card-desc">Painel financeiro interativo em tempo real focado em experiÃªncia do usuÃ¡rio e otimizaÃ§Ã£o de renderizaÃ§Ã£o.</p>
+                            <span class="project-card-more">
+                                Ver Detalhes 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="section contato-section">
+            <div class="container contato-container">
+                <div class="section-header center">
+                    <h2 class="section-title">Contato</h2>
+                    <div class="section-divider center"></div>
+                </div>
+
+                <p class="contato-text">Vamos criar algo grande juntos? Escolha o canal de sua prefer&ecirc;ncia e entre em contato.</p>
+
+                <!-- Grade de Bot&otilde;es de Contato -->
+                <div class="contato-grid">
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/dev-caiohenrique" target="_blank" rel="noopener noreferrer" class="contato-card" id="contato-linkedin" aria-label="LinkedIn">
+                        <div class="contato-card-icon" style="background: rgba(10,102,194,0.12); color: #0a66c2;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <div class="contato-card-info">
+                            <span class="contato-card-label">LinkedIn</span>
+                            <span class="contato-card-value">dev-caiohenrique</span>
+                        </div>
+                        <svg class="contato-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/dev-caiohenrique" target="_blank" rel="noopener noreferrer" class="contato-card" id="contato-github" aria-label="GitHub">
+                        <div class="contato-card-icon" style="background: rgba(240,246,252,0.08); color: #e2e8f0;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </div>
+                        <div class="contato-card-info">
+                            <span class="contato-card-label">GitHub</span>
+                            <span class="contato-card-value">dev-caiohenrique</span>
+                        </div>
+                        <svg class="contato-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5562999136390" target="_blank" rel="noopener noreferrer" class="contato-card" id="contato-whatsapp" aria-label="WhatsApp">
+                        <div class="contato-card-icon" style="background: rgba(37,211,102,0.12); color: #25d366;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        </div>
+                        <div class="contato-card-info">
+                            <span class="contato-card-label">WhatsApp</span>
+                            <span class="contato-card-value">(62) 99913-6390</span>
+                        </div>
+                        <svg class="contato-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="https://mail.google.com/mail/?view=cm&to=caiohenrique200924@gmail.com&su=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank" rel="noopener noreferrer" class="contato-card" id="contato-email" aria-label="E-mail">
+                        <div class="contato-card-icon" style="background: rgba(56,189,248,0.1); color: #38bdf8;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contato-card-info">
+                            <span class="contato-card-label">E-mail</span>
+                            <span class="contato-card-value">caiohenrique200924@gmail.com</span>
+                        </div>
+                        <svg class="contato-card-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RodapÃ© -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2026 Caio. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dev-caiohenrique" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/dev-caiohenrique" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a href="https://wa.me/5562999136390" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&to=caiohenrique200924@gmail.com&su=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank" rel="noopener noreferrer" aria-label="E-mail" title="E-mail">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL OVERLAY (Estrutura Ãºnica gerenciada dinamicamente via JS) -->
+    <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+        <div class="modal-wrapper">
+            <button class="modal-close" aria-label="Fechar modal" id="modal-close-btn">&times;</button>
+            <div class="modal-body">
+                <!-- TÃ­tulo e Tags -->
+                <div class="modal-meta">
+                    <div class="modal-tags" id="modal-tags">
+                        <!-- Gerado Dinamicamente -->
+                    </div>
+                    <h2 class="modal-title" id="modal-title">TÃ­tulo do Projeto</h2>
+                </div>
+                
+                <!-- Interface do Modal: Painel de Abas -->
+                <div class="modal-layout">
+                    <!-- Abas de NavegaÃ§Ã£o (Esquerda/Topo) -->
+                    <div class="modal-tabs">
+                        <button class="tab-btn active" data-tab="visao-geral">VisÃ£o Geral</button>
+                        <button class="tab-btn" data-tab="arquitetura">Arquitetura</button>
+                        <button class="tab-btn" data-tab="codigo">Trecho de CÃ³digo</button>
+                        <button class="tab-btn" data-tab="desafios">Desafios Resolvidos</button>
+                    </div>
+                    
+                    <!-- ConteÃºdo das Abas (Direita/Base) -->
+                    <div class="modal-tab-content">
+                        <!-- Aba 1: VisÃ£o Geral -->
+                        <div class="tab-pane active" id="tab-visao-geral">
+                            <!-- Gerado via JS -->
+                        </div>
+                        
+                        <!-- Aba 2: Arquitetura -->
+                        <div class="tab-pane" id="tab-arquitetura">
+                            <!-- Gerado via JS -->
+                        </div>
+                        
+                        <!-- Aba 3: CÃ³digo -->
+                        <div class="tab-pane" id="tab-codigo">
+                            <!-- Gerado via JS -->
+                        </div>
+                        
+                        <!-- Aba 4: Desafios -->
+                        <div class="tab-pane" id="tab-desafios">
+                            <!-- Gerado via JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
