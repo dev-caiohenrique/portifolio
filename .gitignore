@@ -1,0 +1,10 @@
+# Variáveis de ambiente e segredos
+.env
+credentials.json
+token.json
+
+# Arquivos temporários
+.tmp/
+
+# Logs
+*.log
