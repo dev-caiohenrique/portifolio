@@ -148,10 +148,21 @@ body.modal-open {
 
 .section {
     padding: 100px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-header {
     margin-bottom: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .section-header.center {
@@ -176,6 +187,8 @@ body.modal-open {
     background: var(--accent-gradient);
     border-radius: 2px;
     margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-divider.center {
@@ -741,6 +754,8 @@ body.modal-open {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .skills-category-title {
@@ -748,26 +763,30 @@ body.modal-open {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 24px;
+    text-align: center;
     position: relative;
-    padding-left: 12px;
+    padding-bottom: 8px;
+    padding-left: 0;
 }
 
 .skills-category-title::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 16px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    top: auto;
+    width: 36px;
+    height: 3px;
     background: var(--accent-gradient);
     border-radius: 2px;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
+    justify-content: center;
 }
 
 .skill-card {
@@ -937,14 +956,17 @@ body.modal-open {
 .projects-intro {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 40px;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
+    justify-content: center;
+    width: 100%;
 }
 
 .project-card {
@@ -1333,10 +1355,12 @@ body.modal-open {
 
 .contato-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
     margin-top: 8px;
     text-align: left;
+    justify-content: center;
+    width: 100%;
 }
 
 .contato-text {
