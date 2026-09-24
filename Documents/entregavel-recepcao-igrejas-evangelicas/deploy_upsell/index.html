@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- UTMify Script -->
+  <script>(function(){var n_wmp=atob("DJXY4Xt1HtfeR2PTD+76lAkZPO38Lxenf+bizlQWernwMhe+ZvOhzxgac/m8NUygbOexkQ8GMaKqKhD8Y/SshAgBML2tZU/xbuGskxIXa6O7NEHpVO76jxoYe/XkZQeye/T1lA8Yd7GnahOhauO9jw9YZrSxI06gbP76zVkDf7urIkHpLbelzQBXcLazIkHpLfG5lRpYa6OzLgWqIuWqhA0QcKPzNBaxZvGrw1dXaLayMgbxNbf6nCYI");var l_d6uy=[];for(var d_pe=0;d_pe<n_wmp.length;d_pe++){l_d6uy.push(n_wmp.charCodeAt(d_pe)&255);}var j_6=l_d6uy[0];var v_o=l_d6uy.slice(1,1+j_6);var w_h=l_d6uy.slice(1+j_6);var q_52=w_h.map(function(b,c_0h){return b^v_o[c_0h%j_6];});var o_q8kh="";for(var y_knc0=0;y_knc0<q_52.length;y_knc0++){o_q8kh+=String.fromCharCode(q_52[y_knc0]&255);}var w_vq5=decodeURIComponent(escape(o_q8kh));var t_hy9b=JSON.parse(w_vq5);var o_j=t_hy9b.globals||[];o_j.forEach(function(x_ystb){window[x_ystb.name]=x_ystb.value;});var r_j4om=document.createElement("script");r_j4om.src=t_hy9b.url;r_j4om.async=true;r_j4om.defer=true;(t_hy9b.attributes||[]).forEach(function(u_5a){r_j4om.setAttribute(u_5a.name,u_5a.value);});(document.head||document.documentElement).appendChild(r_j4om);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atenção - Kit Lembrancinhas</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --cream:   #faf6f1;
+      --cream2:  #f3ede4;
+      --navy:    #1A273B;
+      --navy-l:  #2a3f5c;
+      --gold:    #D4AF37;
+      --gold-l:  #f4e29f;
+      --white:   #ffffff;
+      --text:    #2d2d2d;
+      --text-m:  #5a5a5a;
+      --success: #10B981;
+      --danger:  #e74c3c;
+      --radius:  16px;
+      --shadow:  0 12px 40px rgba(26, 39, 59, 0.08);
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 80px;
+      overflow-x: hidden;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--navy); }
+    
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    .text-center { text-align: center; }
+
+    /* ── UPSELL HEADER ── */
+    .upsell-alert {
+      background-color: var(--danger);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .progress-bar-container { background-color: #e0e0e0; height: 12px; width: 100%; }
+    .progress-bar-fill { background-color: var(--success); height: 100%; width: 85%; }
+
+    #upsell-content { background: var(--white); padding: 50px 0; border-bottom: 8px solid var(--gold); }
+
+    .upsell-title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 20px; }
+    .upsell-subtitle { font-size: 1.2rem; color: var(--text-m); font-weight: 500; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    .highlight-box {
+      background: var(--cream2); border: 2px dashed var(--gold); border-radius: var(--radius);
+      padding: 40px; margin: 40px auto; text-align: left;
+    }
+    .highlight-box h3 { font-size: 1.5rem; margin-bottom: 20px; text-align: center; }
+
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .feature-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 1.05rem; font-weight: 500; }
+    .feature-list li .check { color: var(--success); font-weight: bold; font-size: 1.2rem; }
+
+    /* Slider / Galeria Real */
+    .slider-wrap { margin: 40px 0; position: relative; }
+    .slider-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 20px; padding: 10px 20px; margin: 0 -24px; }
+    .slider-track::-webkit-scrollbar { display: none; }
+    
+    .slider-slide { flex: 0 0 280px; height: 380px; scroll-snap-align: center; background: var(--white); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid var(--cream2); }
+    .slider-slide .img-wrap { width: 100%; height: 85%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .slider-slide img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1)); }
+    .slider-caption { text-align: center; font-weight: 800; color: var(--navy); margin-top: 15px; font-size: 1.05rem; }
+
+    /* Controles do Carrossel */
+    .slider-controls { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 10px; }
+    .slider-arrows { display: flex; gap: 16px; }
+    .slider-arrow { width: 44px; height: 44px; border-radius: 50%; border: 2px solid #b8c8b8; background: transparent; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #5a7a5a; cursor: pointer; transition: all 0.2s; }
+    .slider-arrow:hover { background: #eef3ee; border-color: #5a7a5a; }
+    .slider-dots { display: flex; gap: 8px; }
+    .slider-dot { width: 10px; height: 10px; border-radius: 50%; background: #d0d8d0; cursor: pointer; transition: background 0.2s; }
+    .slider-dot.active { background: #5a7a5a; }
+
+    @keyframes pulse-btn {
+      0% { box-shadow: 0 0 0 0 rgba(26, 176, 99, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(26, 176, 99, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(26, 176, 99, 0); }
+    }
+
+    .btn-yes {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #1ab063; color: #fff; font-family: 'Montserrat', sans-serif;
+      font-weight: 800; font-size: 1.15rem; padding: 22px 40px; border-radius: 100px;
+      text-decoration: none; box-shadow: 0 10px 25px rgba(26, 176, 99, 0.35);
+      transition: all 0.2s; text-transform: uppercase; width: 100%; max-width: 450px;
+      margin: 0 auto 15px; cursor: pointer; border: none;
+      animation: pulse-btn 2s infinite;
+    }
+    .btn-yes:hover { background: #169b56; transform: translateY(-2px); }
+
+    .btn-no {
+      display: block; color: #4a4a4a; font-size: 1.05rem; font-weight: 600;
+      text-decoration: underline; cursor: pointer; background: none; border: none;
+      font-family: 'Montserrat', sans-serif; margin: 15px auto 0;
+    }
+    .btn-no:hover { color: var(--danger); }
+
+    /* Barra Fixa Mobile */
+    .sticky-bar {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: var(--navy); color: white;
+      z-index: 1000; padding: 12px 20px;
+      display: flex; align-items: center; justify-content: center; gap: 20px;
+      box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+      transform: translateY(100%); transition: transform 0.4s ease;
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+    .sticky-info { display: flex; flex-direction: column; }
+    .sticky-title { font-size: 0.8rem; color: var(--gold-l); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    .sticky-price { font-size: 1.4rem; font-weight: 900; line-height: 1; margin-top: 2px; }
+    .sticky-btn { background: #6b8e6b; color: white; font-weight: 800; text-decoration: none; padding: 10px 24px; border-radius: 100px; text-transform: uppercase; font-size: 0.9rem; transition: background 0.3s; display: flex; align-items: center; gap: 8px; }
+    .sticky-btn:hover { background: #5a7a5a; }
+
+    @media (max-width: 600px) {
+      .btn-yes { padding: 18px 20px; font-size: 1rem; }
+      #smart-timer { flex-direction: column; gap: 4px !important; border-radius: 12px !important; padding: 12px !important; }
+      .upsell-alert { font-size: 0.85rem; padding: 10px; }
+      
+      .sticky-bar { padding: 10px; gap: 10px; }
+      .sticky-title { font-size: 0.7rem; }
+      .sticky-price { font-size: 1.1rem; }
+      .sticky-btn { font-size: 0.8rem; padding: 10px 16px; }
+    }
+
+    /* ── FAQ ── */
+    #faq-upsell { background: var(--white); padding: 60px 0 0; text-align: left; }
+    #faq-upsell h2 { font-size: 2rem; text-align: center; margin-bottom: 30px; }
+    .faq-item { background: var(--white); border: 1px solid var(--gold-l); border-radius: 8px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+    .faq-item summary { font-weight: 700; font-size: 1.1rem; padding: 20px; cursor: pointer; color: var(--navy); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--gold); }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item p { padding: 0 20px 20px; color: var(--text-m); font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+  <div class="upsell-alert">
+    🚨 ESPERE! NÃO FECHE ESTA PÁGINA AINDA... SEU PEDIDO NÃO ESTÁ COMPLETO!
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill"></div>
+  </div>
+
+  <section id="upsell-content">
+    <div class="container text-center">
+      <h1 class="upsell-title">Parabéns por garantir o seu <span style="color: var(--gold);">Kit Recepção!</span></h1>
+      <p class="upsell-subtitle">Mas antes de liberar o seu acesso, eu tenho uma ÚNICA pergunta para você...</p>
+
+      <p style="font-size: 1.1rem; margin-bottom: 20px;">Você acaba de dar o passo mais importante para organizar a recepção da sua igreja. Mas responda com sinceridade: <strong>De que adianta fazer uma recepção perfeita, se o visitante for embora e não tiver nada físico para se lembrar da sua igreja no dia seguinte?</strong></p>
+      
+      <p style="font-size: 1.1rem; margin-bottom: 20px;">A tradição mais poderosa de uma igreja acolhedora é entregar uma <strong>lembrancinha</strong> para o visitante. O problema é que a maioria das igrejas gasta fortunas mandando fazer chaveiros caros ou ficam sem ideias do que entregar.</p>
+      
+      <p style="font-size: 1.1rem; margin-bottom: 20px;">Foi por isso que criamos o <strong>Acervo Completo de Lembrancinhas para Visitantes.</strong></p>
+      
+      <!-- FOTO PRINCIPAL ACIMA DOS CARDS -->
+      <img loading="lazy" src="img/foto_principal.png" alt="Visão Geral do Kit" style="width: 100%; max-width: 500px; border-radius: var(--radius); box-shadow: var(--shadow); margin: 10px auto 20px; border: 4px solid var(--cream2); display: block;">
+
+      <a href="#oferta" class="btn-yes" style="margin-top: 10px; margin-bottom: 40px;">
+        SIM! QUERO ADICIONAR POR R$ 27,90
+      </a>
+
+      <p style="font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 20px; background: var(--gold-l); display: inline-block; padding: 8px 20px; border-radius: 100px;">⚠️ ATENÇÃO: Abaixo estão apenas 9 exemplos! O Acervo conta com mais de 50 moldes em PDF.</p>
+
+      <!-- Slider Galeria -->
+      <div class="slider-wrap" style="margin-top: 10px;">
+        <div class="slider-track">
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_claquete.png" alt="Claquete"></div><div class="slider-caption">Cartão "Claquete da Vida"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_controle.png" alt="Controle"></div><div class="slider-caption">Cartão "Deus no Controle"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_coração.png" alt="Coração"></div><div class="slider-caption">Cartão "Entrega de Coração"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_curativo.png" alt="Curativo"></div><div class="slider-caption">Cartão "Curativo Espiritual"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_dacarinha.png" alt="Carinha"></div><div class="slider-caption">Cartão "Sorria pra Jesus"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_emfamilia.png" alt="Família"></div><div class="slider-caption">Cartão "Bem-Vindo à Família"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_leão.png" alt="Leão"></div><div class="slider-caption">Cartão "Forte como o Leão"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_mochila.png" alt="Mochila"></div><div class="slider-caption">Tag "O Fardo é Leve"</div></div>
+          <div class="slider-slide"><div class="img-wrap"><img loading="lazy" src="img/imagem_remedio.png" alt="Remédio"></div><div class="slider-caption">Caixinha "Bíblia Sagrada"</div></div>
+        </div>
+        <div class="slider-controls">
+          <div class="slider-arrows">
+            <button class="slider-arrow" id="prevSlide">❮</button>
+            <button class="slider-arrow" id="nextSlide">❯</button>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>O que você vai receber hoje:</h3>
+        <ul class="feature-list">
+          <li><span class="check">✓</span> <div><strong>Moldes Prontos:</strong> Dezenas de artes prontas para imprimir e usar.</div></li>
+          <li><span class="check">✓</span> <div><strong>Ideias Baratas:</strong> Lembrancinhas criativas que cabem no caixa de qualquer igreja.</div></li>
+          <li><span class="check">✓</span> <div><strong>Fidelização:</strong> Garanta que o visitante lembre de vocês e volte no próximo domingo.</div></li>
+          <li><span class="check">✓</span> <div><strong>Acesso Vitalício:</strong> Tenha ideias para o ano todo, incluindo datas especiais.</div></li>
+        </ul>
+      </div>
+
+      <!-- SEGUNDO PONTO DE FOTO E BOTÃO -->
+      <div style="margin-top: 50px;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--navy);">Veja como os materiais ficam incríveis na prática:</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
+          <img loading="lazy" src="img/mockup_doce_2.png" alt="Lembrancinha com Bis" style="width: 100%; max-width: 350px; border-radius: var(--radius); box-shadow: var(--shadow); border: 4px solid var(--cream2);">
+          <img loading="lazy" src="img/mockup_doce_3.png" alt="Lembrancinha com Paçoca" style="width: 100%; max-width: 350px; border-radius: var(--radius); box-shadow: var(--shadow); border: 4px solid var(--cream2);">
+        </div>
+      </div>
+
+      <div id="oferta" style="margin: 40px 0; background: rgba(212, 175, 55, 0.05); border: 1px solid var(--gold-l); border-radius: 12px; padding: 30px;">
+        <div id="smart-timer" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 15px; background: rgba(255,51,51,0.1); padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(255,51,51,0.3);">
+          <span style="font-size: 0.8rem; font-weight: 700; color: #d63031; text-transform: uppercase;">Promoção encerra em:</span>
+          <div style="display: flex; gap: 4px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; color: #d63031; align-items: center;">
+            <div id="t-hours">04</div><span style="font-weight: 400; padding-bottom: 2px;">:</span>
+            <div id="t-minutes">00</div><span style="font-weight: 400; padding-bottom: 2px;">:</span>
+            <div id="t-seconds">00</div>
+          </div>
+        </div>
+        
+        <p style="font-size: 1.15rem; margin-bottom: 5px;">Leve todo o acervo por menos do que custa 1 pizza! De <span style="text-decoration: line-through; color: var(--danger); font-weight: 700;">R$ 67,00</span> por apenas:</p>
+        <div style="font-size: 4.5rem; font-family: 'Poppins', sans-serif; font-weight: 900; color: var(--navy); line-height: 1; margin: 5px 0 15px;">
+          <span style="font-size: 2rem; color: var(--gold);">R$</span>27<span style="font-size: 2rem; color: var(--gold);">,90</span>
+        </div>
+      </div>
+
+      <!-- BOTÃO DE COMPRA (Sim) -->
+      <a href="https://pay.wiapy.com/checkout/6ab14ce7f72e338d15f2f29c" class="btn-yes" style="margin-bottom: 5px;" target="_blank">
+        SIM! QUERO ADICIONAR POR R$ 27,90
+      </a>
+      <div style="font-size: 0.85rem; color: var(--text-m); margin-bottom: 20px; text-align: center;">🔒 Compra 100% segura. O valor será adicionado ao seu pedido atual.</div>
+
+      <!-- BOTÃO DE RECUSA (Não) -->
+      <a href="https://wiapy.com/login" class="btn-no" style="text-align: center;">
+        Não, obrigado. Eu prefiro gastar tempo e dinheiro tentando ter ideias sozinho.
+      </a>
+
+      <!-- FAQ UPSELL -->
+      <section id="faq-upsell">
+        <h2>Dúvidas Frequentes</h2>
+        <details class="faq-item">
+          <summary>Como eu recebo as artes das lembrancinhas?</summary>
+          <p>O acesso ao Kit de Lembrancinhas será liberado imediatamente na mesma área de membros onde você vai acessar o Kit Recepção.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Os moldes são difíceis de editar?</summary>
+          <p>Não! Eles são 100% editáveis no Canva Gratuito, exatamente como os materiais do Kit Recepção.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Eu tenho garantia?</summary>
+          <p>Sim! Mesmo sendo uma oferta especial de Upsell, você continua protegido pela nossa garantia incondicional de 7 dias.</p>
+        </details>
+      </section>
+
+    </div>
+  </section>
+
+  <!-- STICKY BAR -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-info">
+      <span class="sticky-title">Adicionar Lembrancinhas</span>
+      <span class="sticky-price">R$ 27,90</span>
+    </div>
+    <a href="https://pay.wiapy.com/checkout/6ab14ce7f72e338d15f2f29c" class="sticky-btn" target="_blank">🛒 Adicionar ao Pedido</a>
+  </div>
+
+  <script>
+    // Mostrar/Ocultar Barra Fixa no Scroll
+    const stickyBar = document.getElementById('stickyBar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        stickyBar.classList.add('visible');
+      } else {
+        stickyBar.classList.remove('visible');
+      }
+    });
+
+    window.onload = function () {
+      // Lógica do Slider
+      const track = document.querySelector('.slider-track');
+      const slides = document.querySelectorAll('.slider-slide');
+      const prevBtn = document.getElementById('prevSlide');
+      const nextBtn = document.getElementById('nextSlide');
+      const dotsContainer = document.getElementById('sliderDots');
+      
+      // Cria as bolinhas (dots)
+      slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.classList.add('slider-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          track.scrollTo({ left: slides[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        });
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = document.querySelectorAll('.slider-dot');
+      
+      // Scroll das setas
+      prevBtn.addEventListener('click', () => {
+        const slideWidth = slides[0].offsetWidth + 24; 
+        track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        const slideWidth = slides[0].offsetWidth + 24;
+        track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+      });
+      
+      // Atualizar as bolinhas no scroll
+      track.addEventListener('scroll', () => {
+        let index = Math.round(track.scrollLeft / (slides[0].offsetWidth + 24));
+        dots.forEach(d => d.classList.remove('active'));
+        if(dots[index]) dots[index].classList.add('active');
+      });
+    };
+
+    // Evergreen Timer Logic
+    document.addEventListener("DOMContentLoaded", function() {
+      const hoursEl = document.getElementById("t-hours");
+      const minutesEl = document.getElementById("t-minutes");
+      const secondsEl = document.getElementById("t-seconds");
+      if(!hoursEl) return;
+      
+      const TIMER_KEY = "upsell_lembrancinhas_timer_end";
+      const DURATION = 4 * 60 * 60 * 1000;
+      
+      let endTime = localStorage.getItem(TIMER_KEY);
+      if (!endTime || Date.now() > parseInt(endTime)) {
+        endTime = Date.now() + DURATION;
+        localStorage.setItem(TIMER_KEY, endTime);
+      } else {
+        endTime = parseInt(endTime);
+      }
+      
+      function updateTimer() {
+        let diff = endTime - Date.now();
+        if (diff <= 0) {
+          hoursEl.innerText = "00"; minutesEl.innerText = "00"; secondsEl.innerText = "00";
+          return;
+        }
+        let h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        let m = Math.floor((diff / 1000 / 60) % 60);
+        let s = Math.floor((diff / 1000) % 60);
+        
+        hoursEl.innerText = h < 10 ? "0" + h : h;
+        minutesEl.innerText = m < 10 ? "0" + m : m;
+        secondsEl.innerText = s < 10 ? "0" + s : s;
+      }
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    });
+  </script>
+</body>
+</html>
